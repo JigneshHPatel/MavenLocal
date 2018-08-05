@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MixedContentSuite]">
+  <test thread-count="5" name="MixedContentTest(failed)">
+    <classes>
+      <class name="cljCheck.GetMixContentWarning">
+        <methods>
+          <include name="news"/>
+          <include name="travel"/>
+          <include name="setup"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- cljCheck.GetMixContentWarning -->
+    </classes>
+  </test> <!-- MixedContentTest(failed) -->
+</suite> <!-- Failed suite [MixedContentSuite] -->

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="20" name="cljSuite" parallel="tests">
+
+
+	<test name="cljTestChrome65">
+
+		<parameter name="os" value="Windows" />
+		<parameter name="os_version" value="10" />
+		<parameter name="browser" value="Chrome" />
+		<parameter name="browser_version" value="65.0" />
+		<packages>
+			<package name="src/test/java" />
+		</packages>
+		<classes>
+
+
+			<class name="cljCheck.Sample">
+
+
+			</class>
+
+
+			<!-- <methods> <include name="i_SocialShareOn_Comments"></include> </methods> 
+				<class name="cljCheck.ReaderComment"> <methods> <include name="a_CommentInfo"></include></methods> 
+				</class> <class name="cljCheck.FFF"/> <class name="cljCheck.SEO_Module"/> 
+				<class name="cljCheck.PreNextCtr"/> -->
+		</classes>
+	</test>
+
+
+
+	<test name="cljTestFirefox">
+		<parameter name="os" value="Windows" />
+		<parameter name="os_version" value="10" />
+		<parameter name="browser" value="Firefox" />
+		<parameter name="browser_version" value="59.0" />
+		<packages>
+			<package name="src/test/java" />
+		</packages>
+
+		<classes>
+
+
+			<class name="cljCheck.Sample">
+
+
+			</class>
+
+
+
+		</classes>
+
+	</test>
+
+	<test name="cljTestSafari">
+		<parameter name="os" value="OS X" />
+		<parameter name="os_version" value="High Sierra" />
+		<parameter name="browser" value="Safari" />
+		<parameter name="browser_version" value="11.0" />
+		<packages>
+			<package name="src/test/java" />
+		</packages>
+
+		<classes>
+
+			<!-- <class name="cljCheck.SEO_Module"/> -->
+
+		</classes>
+
+	</test>
+	<test name="cljTestEdge">
+		<parameter name="os" value="Windows" />
+		<parameter name="os_version" value="10" />
+		<parameter name="browser" value="Edge" />
+		<parameter name="browser_version" value="16.0" />
+		<packages>
+			<package name="src/test/java" />
+		</packages>
+
+		<classes>
+			<class name="cljCheck.Sample">
+
+
+			</class>
+
+			<!-- <class name="cljCheck.ReaderComment"> <methods> <include name="d_ReportAbuse"></include> 
+				</methods> </class> <class name="cljCheck.SocialShare"/> <class name="cljCheck.PreNextCtr"/> 
+				<class name="cljCheck.RelatedArticle"/> <class name="cljCheck.MostShared"/> 
+				<class name="cljCheck.TopicPage"/> <class name="cljCheck.ReaderComment"/> 
+				<class name="cljCheck.SocialShare"/> <class name="cljCheck.Sports"/> <class 
+				name="cljCheck.AllMenuSubMenuNav"/> <class name="cljCheck.Sports"> <methods> 
+				<include name="b_StartsOfSportPuff"></include></methods> </class> -->
+		</classes>
+
+
+
+	</test>
+
+
+	<test name="cljTestIE">
+		<parameter name="os" value="Windows" />
+		<parameter name="os_version" value="7" />
+		<parameter name="browser" value="Chrome" />
+		<parameter name="browser_version" value="64.0" />
+		<packages>
+			<package name="src/test/java" />
+		</packages>
+
+		<classes>
+
+			<class name="cljCheck.Sample">
+
+
+			</class>
+
+
+		</classes>
+
+
+
+	</test>
+
+
+</suite>

@@ -1,0 +1,769 @@
+<html>
+<head>
+<title>TestNG:  FirefoxTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>FirefoxTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>21/4/8</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Aug 03 12:26:50 BST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>3171 seconds (3171245 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='clj.Frontend.SocialShare.c_SocialShareArticlePreview()'><b>c_SocialShareArticlePreview</b><br>Test class: clj.Frontend.SocialShare<br>Test method: Social share icons on article preview on home page, new FB preview and old previews</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at commonLibrary.SocialLoginsMethods.CLickSocialSahreIconAndAssert(SocialLoginsMethods.java:70)
+	at clj.Frontend.SocialShare.c_SocialShareArticlePreview(SocialShare.java:72)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace476840432", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace476840432'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at commonLibrary.SocialLoginsMethods.CLickSocialSahreIconAndAssert(SocialLoginsMethods.java:70)
+	at clj.Frontend.SocialShare.c_SocialShareArticlePreview(SocialShare.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:838)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1009)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>49</td>
+<td>clj.Frontend.SocialShare@6e0e048a</td></tr>
+<tr>
+<td title='clj.Frontend.AllLoginsAndMyProfile.c_TwitterLogin()'><b>c_TwitterLogin</b><br>Test class: clj.Frontend.AllLoginsAndMyProfile<br>Test method: Login by Twitter</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[FirefoxDriver: firefox on MAC (56d3bbbf-96e3-9548-97b7-52f4ec7bf7ed)] -&gt; id: login] (tried for 30 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
+System info: host: &apos;MOL-HSK-CIT0040&apos;, ip: &apos;fe80:0:0:0:1472:6125:5b1d:fb47%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 35576, moz:profile: /var/folders/0n/gznryz212yx..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 16.7.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 56d3bbbf-96e3-9548-97b7-52f4ec7bf7ed
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at commonLibrary.LoginAndMyProfileMethods.AllLoginMethods(LoginAndMyProfileMethods.java:78)
+	at clj.Frontend.AllLoginsAndMyProfile.c_TwitterLogin(AllLoginsAndMyProfile.java:84)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1237389179", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1237389179'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[FirefoxDriver: firefox on MAC (56d3bbbf-96e3-9548-97b7-52f4ec7bf7ed)] -&gt; id: login] (tried for 30 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
+System info: host: &apos;MOL-HSK-CIT0040&apos;, ip: &apos;fe80:0:0:0:1472:6125:5b1d:fb47%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 35576, moz:profile: /var/folders/0n/gznryz212yx..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 16.7.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 56d3bbbf-96e3-9548-97b7-52f4ec7bf7ed
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at commonLibrary.LoginAndMyProfileMethods.AllLoginMethods(LoginAndMyProfileMethods.java:78)
+	at clj.Frontend.AllLoginsAndMyProfile.c_TwitterLogin(AllLoginsAndMyProfile.java:84)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:838)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1009)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>75</td>
+<td>clj.Frontend.AllLoginsAndMyProfile@7b49cea0</td></tr>
+<tr>
+<td title='clj.Frontend.ReaderComment.e_FbComment()'><b>e_FbComment</b><br>Test class: clj.Frontend.ReaderComment<br>Test method: Posting comment to Facebook and Dailymail</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: The element reference of [object String] &quot;9689a458-685e-d94e-ba26-0b1a2fbf6877&quot; is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
+System info: host: &apos;MOL-HSK-CIT0040&apos;, ip: &apos;fe80:0:0:0:1472:6125:5b1d:fb47%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 36925, moz:profile: /var/folders/0n/gznryz212yx..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 16.7.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 28939c50-8482-a047-89e8-d43cc2c64f6c
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy13.click(Unknown Source)
+	at clj.Frontend.ReaderComment.e_FbComment(ReaderComment.java:117)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace665337110", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace665337110'><pre>org.openqa.selenium.StaleElementReferenceException: The element reference of [object String] &quot;9689a458-685e-d94e-ba26-0b1a2fbf6877&quot; is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
+System info: host: &apos;MOL-HSK-CIT0040&apos;, ip: &apos;fe80:0:0:0:1472:6125:5b1d:fb47%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 36925, moz:profile: /var/folders/0n/gznryz212yx..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 16.7.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 28939c50-8482-a047-89e8-d43cc2c64f6c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy13.click(Unknown Source)
+	at clj.Frontend.ReaderComment.e_FbComment(ReaderComment.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:838)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1009)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>181</td>
+<td>clj.Frontend.ReaderComment@61f8bee4</td></tr>
+<tr>
+<td title='clj.Frontend.SocialShare.f_SocialShare_Top_Article()'><b>f_SocialShare_Top_Article</b><br>Test class: clj.Frontend.SocialShare<br>Test method: Social shares on top of article/ under headline</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at commonLibrary.SocialLoginsMethods.CLickSocialSahreIconAndAssert(SocialLoginsMethods.java:70)
+	at commonLibrary.SocialLoginsMethods.SocialIconInDrawerTest(SocialLoginsMethods.java:48)
+	at clj.Frontend.SocialShare.f_SocialShare_Top_Article(SocialShare.java:162)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace369896213", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace369896213'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at commonLibrary.SocialLoginsMethods.CLickSocialSahreIconAndAssert(SocialLoginsMethods.java:70)
+	at commonLibrary.SocialLoginsMethods.SocialIconInDrawerTest(SocialLoginsMethods.java:48)
+	at clj.Frontend.SocialShare.f_SocialShare_Top_Article(SocialShare.java:162)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:838)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1009)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>66</td>
+<td>clj.Frontend.SocialShare@6e0e048a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='clj.Frontend.MostShared.MostShared_UK_HomePage()'><b>MostShared_UK_HomePage</b><br>Test class: clj.Frontend.MostShared</td>
+<td></td>
+<td>18</td>
+<td>clj.Frontend.MostShared@7fac631b</td></tr>
+<tr>
+<td title='clj.Frontend.MostShared.MostShared_US_HomePage()'><b>MostShared_US_HomePage</b><br>Test class: clj.Frontend.MostShared</td>
+<td></td>
+<td>25</td>
+<td>clj.Frontend.MostShared@7fac631b</td></tr>
+<tr>
+<td title='clj.Frontend.PreNextControls.PreNextControl()'><b>PreNextControl</b><br>Test class: clj.Frontend.PreNextControls</td>
+<td></td>
+<td>34</td>
+<td>clj.Frontend.PreNextControls@887af79</td></tr>
+<tr>
+<td title='clj.Frontend.RelatedArticle.RelatedArticles()'><b>RelatedArticles</b><br>Test class: clj.Frontend.RelatedArticle<br>Test method: check related module, FB icon and related articles</td>
+<td></td>
+<td>25</td>
+<td>clj.Frontend.RelatedArticle@5b87ed94</td></tr>
+<tr>
+<td title='clj.Frontend.ReaderComment.a_ArticleUrl()'><b>a_ArticleUrl</b><br>Test class: clj.Frontend.ReaderComment<br>Test method: Get wide and unmod article from puff and save in prpertyfile</td>
+<td></td>
+<td>23</td>
+<td>clj.Frontend.ReaderComment@61f8bee4</td></tr>
+<tr>
+<td title='clj.Frontend.AllLoginsAndMyProfile.a_DirectLogin()'><b>a_DirectLogin</b><br>Test class: clj.Frontend.AllLoginsAndMyProfile<br>Test method: Direct login and Profile page</td>
+<td></td>
+<td>39</td>
+<td>clj.Frontend.AllLoginsAndMyProfile@7b49cea0</td></tr>
+<tr>
+<td title='clj.Frontend.SocialShare.a_FacebookLike_TopLeft_HomePage()'><b>a_FacebookLike_TopLeft_HomePage</b><br>Test class: clj.Frontend.SocialShare<br>Test method: FB icon on top left of the page</td>
+<td></td>
+<td>17</td>
+<td>clj.Frontend.SocialShare@6e0e048a</td></tr>
+<tr>
+<td title='clj.Frontend.ReaderComment.b_CommentInfo()'><b>b_CommentInfo</b><br>Test class: clj.Frontend.ReaderComment<br>Test method: Info on comments e.g. user info, newest,oldest etc.</td>
+<td></td>
+<td>82</td>
+<td>clj.Frontend.ReaderComment@61f8bee4</td></tr>
+<tr>
+<td title='clj.Frontend.AllLoginsAndMyProfile.b_FacebookLogin()'><b>b_FacebookLogin</b><br>Test class: clj.Frontend.AllLoginsAndMyProfile<br>Test method: Login by Facebook</td>
+<td></td>
+<td>8</td>
+<td>clj.Frontend.AllLoginsAndMyProfile@7b49cea0</td></tr>
+<tr>
+<td title='clj.Frontend.SocialShare.b_NewFbIconOnArticlePreview()'><b>b_NewFbIconOnArticlePreview</b><br>Test class: clj.Frontend.SocialShare<br>Test method: Social share icons on article preview on home page, new FB preview and old previews</td>
+<td></td>
+<td>14</td>
+<td>clj.Frontend.SocialShare@6e0e048a</td></tr>
+<tr>
+<td title='clj.Frontend.ReaderComment.c_PostComment()'><b>c_PostComment</b><br>Test class: clj.Frontend.ReaderComment<br>Test method: posting direct comment by logging from post comment path</td>
+<td></td>
+<td>242</td>
+<td>clj.Frontend.ReaderComment@61f8bee4</td></tr>
+<tr>
+<td title='clj.Frontend.ReaderComment.d_PostReply()'><b>d_PostReply</b><br>Test class: clj.Frontend.ReaderComment<br>Test method: Post Reply on comment in oldest filter</td>
+<td></td>
+<td>246</td>
+<td>clj.Frontend.ReaderComment@61f8bee4</td></tr>
+<tr>
+<td title='clj.Frontend.AllLoginsAndMyProfile.d_Registration()'><b>d_Registration</b><br>Test class: clj.Frontend.AllLoginsAndMyProfile<br>Test method: Registration page</td>
+<td></td>
+<td>20</td>
+<td>clj.Frontend.AllLoginsAndMyProfile@7b49cea0</td></tr>
+<tr>
+<td title='clj.Frontend.SocialShare.d_SocialShare_UnderSearch_HomePage()'><b>d_SocialShare_UnderSearch_HomePage</b><br>Test class: clj.Frontend.SocialShare<br>Test method: Social shares under search bar on homepage</td>
+<td></td>
+<td>55</td>
+<td>clj.Frontend.SocialShare@6e0e048a</td></tr>
+<tr>
+<td title='clj.Frontend.SocialShare.e_SocialShare_underSearch_Article()'><b>e_SocialShare_underSearch_Article</b><br>Test class: clj.Frontend.SocialShare<br>Test method: Social Shares under search on Article page</td>
+<td></td>
+<td>66</td>
+<td>clj.Frontend.SocialShare@6e0e048a</td></tr>
+<tr>
+<td title='clj.Frontend.ReaderComment.f_ReportAbuse()'><b>f_ReportAbuse</b><br>Test class: clj.Frontend.ReaderComment<br>Test method: Report abuse, asserting all filed are present in report abuse page and negative test</td>
+<td></td>
+<td>119</td>
+<td>clj.Frontend.ReaderComment@61f8bee4</td></tr>
+<tr>
+<td title='clj.Frontend.ReaderComment.g_RateComment()'><b>g_RateComment</b><br>Test class: clj.Frontend.ReaderComment<br>Test method: voting UP and DOWN comment</td>
+<td></td>
+<td>212</td>
+<td>clj.Frontend.ReaderComment@61f8bee4</td></tr>
+<tr>
+<td title='clj.Frontend.SocialShare.g_SocialShare_Bottom_Article()'><b>g_SocialShare_Bottom_Article</b><br>Test class: clj.Frontend.SocialShare<br>Test method: Socialshares at bottom of Article</td>
+<td></td>
+<td>85</td>
+<td>clj.Frontend.SocialShare@6e0e048a</td></tr>
+<tr>
+<td title='clj.Frontend.SocialShare.h_FB_Icon_FlyOut_onArticle()'><b>h_FB_Icon_FlyOut_onArticle</b><br>Test class: clj.Frontend.SocialShare<br>Test method: FB icon on flyout on Article page</td>
+<td></td>
+<td>55</td>
+<td>clj.Frontend.SocialShare@6e0e048a</td></tr>
+<tr>
+<td title='clj.Frontend.SocialShare.i_FB_Icon_on_RelatedAtrticle()'><b>i_FB_Icon_on_RelatedAtrticle</b><br>Test class: clj.Frontend.SocialShare<br>Test method: FB icon on Related module</td>
+<td></td>
+<td>24</td>
+<td>clj.Frontend.SocialShare@6e0e048a</td></tr>
+<tr>
+<td title='clj.Frontend.SocialShare.j_SocialShareOn_Comments()'><b>j_SocialShareOn_Comments</b><br>Test class: clj.Frontend.SocialShare<br>Test method: Social share on comments</td>
+<td></td>
+<td>67</td>
+<td>clj.Frontend.SocialShare@6e0e048a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='clj.Frontend.SocialShare.c_SocialShareArticlePreview()'><b>c_SocialShareArticlePreview</b><br>Test class: clj.Frontend.SocialShare<br>Test method: Social share icons on article preview on home page, new FB preview and old previews</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at commonLibrary.SocialLoginsMethods.CLickSocialSahreIconAndAssert(SocialLoginsMethods.java:70)
+	at clj.Frontend.SocialShare.c_SocialShareArticlePreview(SocialShare.java:72)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1445138476", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1445138476'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at commonLibrary.SocialLoginsMethods.CLickSocialSahreIconAndAssert(SocialLoginsMethods.java:70)
+	at clj.Frontend.SocialShare.c_SocialShareArticlePreview(SocialShare.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>49</td>
+<td>clj.Frontend.SocialShare@6e0e048a</td></tr>
+<tr>
+<td title='clj.Frontend.SocialShare.c_SocialShareArticlePreview()'><b>c_SocialShareArticlePreview</b><br>Test class: clj.Frontend.SocialShare<br>Test method: Social share icons on article preview on home page, new FB preview and old previews</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at commonLibrary.SocialLoginsMethods.CLickSocialSahreIconAndAssert(SocialLoginsMethods.java:70)
+	at clj.Frontend.SocialShare.c_SocialShareArticlePreview(SocialShare.java:72)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace292829119", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace292829119'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at commonLibrary.SocialLoginsMethods.CLickSocialSahreIconAndAssert(SocialLoginsMethods.java:70)
+	at clj.Frontend.SocialShare.c_SocialShareArticlePreview(SocialShare.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:838)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1009)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>49</td>
+<td>clj.Frontend.SocialShare@6e0e048a</td></tr>
+<tr>
+<td title='clj.Frontend.AllLoginsAndMyProfile.c_TwitterLogin()'><b>c_TwitterLogin</b><br>Test class: clj.Frontend.AllLoginsAndMyProfile<br>Test method: Login by Twitter</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[FirefoxDriver: firefox on MAC (d1f8f1d2-72c1-6b4e-a4e8-eda9baa4ba98)] -&gt; id: login] (tried for 30 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
+System info: host: &apos;MOL-HSK-CIT0040&apos;, ip: &apos;fe80:0:0:0:1472:6125:5b1d:fb47%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 35457, moz:profile: /var/folders/0n/gznryz212yx..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 16.7.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: d1f8f1d2-72c1-6b4e-a4e8-eda9baa4ba98
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at commonLibrary.LoginAndMyProfileMethods.AllLoginMethods(LoginAndMyProfileMethods.java:78)
+	at clj.Frontend.AllLoginsAndMyProfile.c_TwitterLogin(AllLoginsAndMyProfile.java:84)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace282423310", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace282423310'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[FirefoxDriver: firefox on MAC (d1f8f1d2-72c1-6b4e-a4e8-eda9baa4ba98)] -&gt; id: login] (tried for 30 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
+System info: host: &apos;MOL-HSK-CIT0040&apos;, ip: &apos;fe80:0:0:0:1472:6125:5b1d:fb47%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 35457, moz:profile: /var/folders/0n/gznryz212yx..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 16.7.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: d1f8f1d2-72c1-6b4e-a4e8-eda9baa4ba98
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at commonLibrary.LoginAndMyProfileMethods.AllLoginMethods(LoginAndMyProfileMethods.java:78)
+	at clj.Frontend.AllLoginsAndMyProfile.c_TwitterLogin(AllLoginsAndMyProfile.java:84)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>76</td>
+<td>clj.Frontend.AllLoginsAndMyProfile@7b49cea0</td></tr>
+<tr>
+<td title='clj.Frontend.AllLoginsAndMyProfile.c_TwitterLogin()'><b>c_TwitterLogin</b><br>Test class: clj.Frontend.AllLoginsAndMyProfile<br>Test method: Login by Twitter</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[FirefoxDriver: firefox on MAC (52a177af-1517-e04e-a46a-08e20f569ac0)] -&gt; id: login] (tried for 30 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
+System info: host: &apos;MOL-HSK-CIT0040&apos;, ip: &apos;fe80:0:0:0:1472:6125:5b1d:fb47%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 35542, moz:profile: /var/folders/0n/gznryz212yx..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 16.7.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 52a177af-1517-e04e-a46a-08e20f569ac0
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at commonLibrary.LoginAndMyProfileMethods.AllLoginMethods(LoginAndMyProfileMethods.java:78)
+	at clj.Frontend.AllLoginsAndMyProfile.c_TwitterLogin(AllLoginsAndMyProfile.java:84)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace984494982", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace984494982'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[FirefoxDriver: firefox on MAC (52a177af-1517-e04e-a46a-08e20f569ac0)] -&gt; id: login] (tried for 30 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
+System info: host: &apos;MOL-HSK-CIT0040&apos;, ip: &apos;fe80:0:0:0:1472:6125:5b1d:fb47%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 35542, moz:profile: /var/folders/0n/gznryz212yx..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 16.7.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 52a177af-1517-e04e-a46a-08e20f569ac0
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at commonLibrary.LoginAndMyProfileMethods.AllLoginMethods(LoginAndMyProfileMethods.java:78)
+	at clj.Frontend.AllLoginsAndMyProfile.c_TwitterLogin(AllLoginsAndMyProfile.java:84)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:838)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1009)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>76</td>
+<td>clj.Frontend.AllLoginsAndMyProfile@7b49cea0</td></tr>
+<tr>
+<td title='clj.Frontend.ReaderComment.e_FbComment()'><b>e_FbComment</b><br>Test class: clj.Frontend.ReaderComment<br>Test method: Posting comment to Facebook and Dailymail</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[FirefoxDriver: firefox on MAC (0529d3bd-86f0-4d4f-a5e2-b24edfda6305)] -&gt; css selector: .btn.fbConfirm] (tried for 20 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
+System info: host: &apos;MOL-HSK-CIT0040&apos;, ip: &apos;fe80:0:0:0:1472:6125:5b1d:fb47%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 36660, moz:profile: /var/folders/0n/gznryz212yx..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 16.7.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 0529d3bd-86f0-4d4f-a5e2-b24edfda6305
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at commonLibrary.WaitMethods.WaitUntilElementClickable(WaitMethods.java:19)
+	at clj.Frontend.ReaderComment.e_FbComment(ReaderComment.java:100)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1428127305", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1428127305'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[FirefoxDriver: firefox on MAC (0529d3bd-86f0-4d4f-a5e2-b24edfda6305)] -&gt; css selector: .btn.fbConfirm] (tried for 20 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
+System info: host: &apos;MOL-HSK-CIT0040&apos;, ip: &apos;fe80:0:0:0:1472:6125:5b1d:fb47%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 36660, moz:profile: /var/folders/0n/gznryz212yx..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 16.7.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 0529d3bd-86f0-4d4f-a5e2-b24edfda6305
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at commonLibrary.WaitMethods.WaitUntilElementClickable(WaitMethods.java:19)
+	at clj.Frontend.ReaderComment.e_FbComment(ReaderComment.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>171</td>
+<td>clj.Frontend.ReaderComment@61f8bee4</td></tr>
+<tr>
+<td title='clj.Frontend.ReaderComment.e_FbComment()'><b>e_FbComment</b><br>Test class: clj.Frontend.ReaderComment<br>Test method: Posting comment to Facebook and Dailymail</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[FirefoxDriver: firefox on MAC (194c2b51-f3f2-1341-9063-aa18ce644414)] -&gt; css selector: .btn.fbConfirm] (tried for 20 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
+System info: host: &apos;MOL-HSK-CIT0040&apos;, ip: &apos;fe80:0:0:0:1472:6125:5b1d:fb47%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 36736, moz:profile: /var/folders/0n/gznryz212yx..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 16.7.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 194c2b51-f3f2-1341-9063-aa18ce644414
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at commonLibrary.WaitMethods.WaitUntilElementClickable(WaitMethods.java:19)
+	at clj.Frontend.ReaderComment.e_FbComment(ReaderComment.java:100)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace200569140", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace200569140'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[FirefoxDriver: firefox on MAC (194c2b51-f3f2-1341-9063-aa18ce644414)] -&gt; css selector: .btn.fbConfirm] (tried for 20 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
+System info: host: &apos;MOL-HSK-CIT0040&apos;, ip: &apos;fe80:0:0:0:1472:6125:5b1d:fb47%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 36736, moz:profile: /var/folders/0n/gznryz212yx..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 16.7.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 194c2b51-f3f2-1341-9063-aa18ce644414
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at commonLibrary.WaitMethods.WaitUntilElementClickable(WaitMethods.java:19)
+	at clj.Frontend.ReaderComment.e_FbComment(ReaderComment.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:838)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1009)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>163</td>
+<td>clj.Frontend.ReaderComment@61f8bee4</td></tr>
+<tr>
+<td title='clj.Frontend.SocialShare.f_SocialShare_Top_Article()'><b>f_SocialShare_Top_Article</b><br>Test class: clj.Frontend.SocialShare<br>Test method: Social shares on top of article/ under headline</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at commonLibrary.SocialLoginsMethods.CLickSocialSahreIconAndAssert(SocialLoginsMethods.java:70)
+	at commonLibrary.SocialLoginsMethods.SocialIconInDrawerTest(SocialLoginsMethods.java:48)
+	at clj.Frontend.SocialShare.f_SocialShare_Top_Article(SocialShare.java:162)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace213011956", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace213011956'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at commonLibrary.SocialLoginsMethods.CLickSocialSahreIconAndAssert(SocialLoginsMethods.java:70)
+	at commonLibrary.SocialLoginsMethods.SocialIconInDrawerTest(SocialLoginsMethods.java:48)
+	at clj.Frontend.SocialShare.f_SocialShare_Top_Article(SocialShare.java:162)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>68</td>
+<td>clj.Frontend.SocialShare@6e0e048a</td></tr>
+<tr>
+<td title='clj.Frontend.SocialShare.f_SocialShare_Top_Article()'><b>f_SocialShare_Top_Article</b><br>Test class: clj.Frontend.SocialShare<br>Test method: Social shares on top of article/ under headline</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at commonLibrary.SocialLoginsMethods.CLickSocialSahreIconAndAssert(SocialLoginsMethods.java:70)
+	at commonLibrary.SocialLoginsMethods.SocialIconInDrawerTest(SocialLoginsMethods.java:48)
+	at clj.Frontend.SocialShare.f_SocialShare_Top_Article(SocialShare.java:162)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace900995550", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace900995550'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at commonLibrary.SocialLoginsMethods.CLickSocialSahreIconAndAssert(SocialLoginsMethods.java:70)
+	at commonLibrary.SocialLoginsMethods.SocialIconInDrawerTest(SocialLoginsMethods.java:48)
+	at clj.Frontend.SocialShare.f_SocialShare_Top_Article(SocialShare.java:162)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:838)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1009)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>68</td>
+<td>clj.Frontend.SocialShare@6e0e048a</td></tr>
+</table><p>
+</body>
+</html>

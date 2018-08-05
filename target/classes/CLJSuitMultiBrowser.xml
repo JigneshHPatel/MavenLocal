@@ -1,0 +1,57 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="MultiBrowser" thread-count="6" parallel="tests">
+	<!-- thread-count="40" parallel="tests" -->
+	
+	<test name="ChromeTest">
+		<parameter name="browser" value="chrome" />
+		<classes>
+		
+
+
+			<class name="clj.Frontend.SpikedAndGeoblocked" /> 
+			<class name="clj.Frontend.MostShared" />
+			<class name="clj.Frontend.SocialShare" />
+			<class name="clj.Frontend.RelatedArticle" />
+			<class name="clj.Frontend.ReaderComment" />
+			<class name="clj.Frontend.AllLoginsAndMyProfile" />
+			<class name="clj.Frontend.PreNextControls" />
+			<class name="clj.Frontend.SearchPage" />  
+			<class name="clj.Frontend.SEO_Module" />
+			<class name="clj.Frontend.TopicPage" />
+			<class name="clj.Frontend.Sports" />
+ 
+
+			<!-- <class name="cljCheck.ReaderComment" /> <class name="cljCheck.MostShared" 
+				/> <class name="cljCheck.SocialShare" /> <class name="cljCheck.AllLoginsAndMyProfile" 
+				/> <class name="cljCheck.PreNextCtr" /> <class name="cljCheck.RelatedArticle" 
+				/> <class name="cljCheck.SearchPage" /> <class name="cljCheck.SEO_Module" 
+				/> <class name="cljCheck.TopicPage" /> <class name="cljCheck.Poll" /> <class 
+				name="cljCheck.Sports"> <methods> <exclude name="a_Ad"></exclude> </methods> 
+				</class> -->
+
+
+		</classes>
+	</test>
+	
+	
+	
+	
+	<test name="FirefoxTest">
+		<parameter name="browser" value="firefox" />
+		<classes>
+	
+			<class name="clj.Frontend.ReaderComment" />
+			<class name="clj.Frontend.AllLoginsAndMyProfile" />
+			<class name="clj.Frontend.PreNextControls" />
+			<class name="clj.Frontend.MostShared" />
+			<class name="clj.Frontend.RelatedArticle" />
+			<class name="clj.Frontend.SocialShare" />
+			<class name="clj.Frontend.ReaderComment" />
+			 
+			
+		</classes>
+	</test>
+
+</suite>

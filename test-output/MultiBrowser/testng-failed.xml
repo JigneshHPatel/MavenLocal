@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="6" guice-stage="DEVELOPMENT" name="Failed suite [MultiBrowser]" parallel="tests">
+  <test thread-count="6" name="FirefoxTest(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="clj.Frontend.SocialShare">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="setup"/>
+          <include name="c_SocialShareArticlePreview"/>
+          <include name="after"/>
+          <include name="beforeSuite"/>
+          <include name="f_SocialShare_Top_Article"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- clj.Frontend.SocialShare -->
+      <class name="clj.Frontend.AllLoginsAndMyProfile">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="setup"/>
+          <include name="c_TwitterLogin"/>
+          <include name="after"/>
+          <include name="beforeSuite"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- clj.Frontend.AllLoginsAndMyProfile -->
+      <class name="clj.Frontend.ReaderComment">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="setup"/>
+          <include name="e_FbComment"/>
+          <include name="after"/>
+          <include name="beforeSuite"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- clj.Frontend.ReaderComment -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+  <test thread-count="6" name="ChromeTest(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="clj.Frontend.SocialShare">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="setup"/>
+          <include name="h_FB_Icon_FlyOut_onArticle"/>
+          <include name="beforeSuite"/>
+          <include name="after"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- clj.Frontend.SocialShare -->
+      <class name="clj.Frontend.SpikedAndGeoblocked">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="setup"/>
+          <include name="beforeSuite"/>
+          <include name="after"/>
+          <include name="b_GeoblockedArticle"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- clj.Frontend.SpikedAndGeoblocked -->
+      <class name="clj.Frontend.RelatedArticle">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="setup"/>
+          <include name="RelatedArticles"/>
+          <include name="beforeSuite"/>
+          <include name="after"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- clj.Frontend.RelatedArticle -->
+      <class name="clj.Frontend.ReaderComment">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="b_CommentInfo"/>
+          <include name="setup"/>
+          <include name="e_FbComment"/>
+          <include name="beforeSuite"/>
+          <include name="after"/>
+          <include name="tearDown"/>
+          <include name="a_ArticleUrl"/>
+        </methods>
+      </class> <!-- clj.Frontend.ReaderComment -->
+      <class name="clj.Frontend.SEO_Module">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="setup"/>
+          <include name="seoModule"/>
+          <include name="beforeSuite"/>
+          <include name="after"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- clj.Frontend.SEO_Module -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+</suite> <!-- Failed suite [MultiBrowser] -->
